@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+ 
+startday = new Date();
+clockStart = startday.getTime();
+
+function initStopwatch() 
+{ 
+ var myTime = new Date(); 
+        var timeNow = myTime.getTime();  
+        var timeDiff = timeNow - clockStart; 
+        this.diffSecs = timeDiff/1000; 
+        return(this.diffSecs); 
+} 
+
+function getSecs() 
+{ 
+        var mySecs = initStopwatch(); 
+        var mySecs1 = ""+mySecs; 
+        mySecs1= mySecs1.substring(0,mySecs1.indexOf(".")) + " segundos"; 
+        document.forms[0].timespent.value = mySecs1 
+        window.setTimeout('getSecs()',1000); 
+}
+
+</script>
+
+</HEAD>
+
+<BODY bgcolor="white" onLoad="window.setTimeout('getSecs()',1)">
+
+
+<h3 align="right"><form>
+Est&aacute;s en esta p&aacute;gina desde hace: 
+<input size=9 name=timespent>
+</form></h3>
+
+<meta charset="utf-8">
+<rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        font-family:Gabriola;
+        text-shadow: 1px 1px 1px black;
+        color:#2F0105;
+
+        background-image: url(fondo.jpg);
+        background-repeat:repeat; }
+		  </style>
+
+<title>  Mi Pagina Web </title>
+</head>
+
+<FONT SIZE="+2.9"> 
+<B> <h1 align="left"> <FONT FACE="Gabriola">Mi sitio web Mariana G&oacutemez Islas 
+</FONT><FONT/></h1></B> 
+
+
+</html>

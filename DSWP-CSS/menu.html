@@ -1,0 +1,106 @@
+<html>
+	<basefont color="white" font="black">
+	<body link="black" vlink="black" alink="black">
+	<body background="me.jpg">
+		<nav>
+				
+<br>
+<br>
+<FONT FACE="Gabriola">
+<h2>
+					<a href="menu1.html" target="Derecho">
+						<li>Informaci&oacute;n  personal</li>
+					</a>
+<br>
+<br>
+
+					<a href="acerca de mi.html" target="Derecho">
+						<li>Acerca de m&iacute;</li>
+					</a>
+<br>
+<br>
+					<a href="contactos.html" target="Derecho">
+						<li>Contactos</li>
+					</a>
+</h2>
+</font>
+<br>
+<br>
+					
+		
+		</nav>
+		
+
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+
+document.write('<!-- Begin Hiding Script -->')
+
+var watchID = null
+var watchRun = false 
+function stopwatch(){
+  if(watchRun) 
+    clearTimeout(watchID)
+  watchRun = false
+} 
+function startwatch(){
+  stopwatch()
+  dayTime()
+} 
+
+function dayTime() {
+  day = new Date();
+  hour = day.getHours();
+  minute = day.getMinutes();
+  second = day.getSeconds();
+ 
+  if (hour > 12) {
+  hours = hour - 12;
+  part = 'PM'}
+  else {
+  part = 'AM';
+  if (hour == 0) {
+  hours = 12
+  }
+  else {
+  hours = hour
+  }
+  } 
+  if (minute < 10) {minutes = 0}
+  else {minutes = ""} 
+  if (second < 10) {seconds = 0}
+  else {seconds =""}
+  date = ('' +(day.getMonth() + 1)+"/"+day.getDate()+ "/"+(day.getYear()-100)+ '');
+  time = ('' + hours + ":"+minutes+""+minute+ ":"+seconds+""+second+ '')
+  parts = ('' +part+ '') 
+  document.timedate.time.value = time
+  document.timedate.date.value = date
+  document.timedate.parts.value = parts
+  watchID = setTimeout("dayTime()",1000)
+  watchRun = true
+}
+document.write('<!-- End Hiding Script --!>')
+
+</script> 
+
+</HEAD>
+
+<BODY bgcolor="white"  onLoad="startwatch()">
+
+
+<form name="timedate" onSubmit="0">
+<table cellspacing=0 cellpadding=0>
+<tr align=center>
+ <td><INPUT TYPE="text" NAME="time" SIZE=7 VALUE ="..Starti"></td>
+ <td><INPUT TYPE="text" NAME="parts" SIZE=2 VALUE ="ng.."></td>
+</tr>
+<tr align=center>
+ <td colspan=2><INPUT TYPE="text" NAME="date" SIZE=8 VALUE ="........"></td>
+</tr>
+</table>
+</form></CENTER> 
+
+
+</body>
+		
+</html>

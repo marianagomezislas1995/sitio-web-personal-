@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+
+<body onload="saludo()">
+
+<script type="text/javascript">
+function saludo() {alert('Bienvenido')}
+
+</script>
+
+<h2 align= right> <font face=Gabriola color="#1364B5"> 
+<SCRIPT LANGUAGE="JavaScript">
+var caution = false
+function setCookie(name, value, expires, path, domain, secure) {
+var curCookie = name + "=" + escape(value) +
+((expires) ? "; expires=" + expires.toGMTString() : "") +
+((path) ? "; path=" + path : "") +
+((domain) ? "; domain=" + domain : "") +
+((secure) ? "; secure" : "")
+if (!caution || (name + "=" + escape(value)).length <= 4000)
+document.cookie = curCookie
+else
+if (confirm("La cookie no puede pesar más de 4kb!"))
+document.cookie = curCookie
+}
+function getCookie(name) {
+var prefix = name + "="
+var cookieStartIndex = document.cookie.indexOf(prefix)
+if (cookieStartIndex == -1)
+return null
+var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+if (cookieEndIndex == -1)
+cookieEndIndex = document.cookie.length
+return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+function deleteCookie(name, path, domain) {
+if (getCookie(name)) {
+document.cookie = name + "=" + 
+((path) ? "; path=" + path : "") +
+((domain) ? "; domain=" + domain : "") +
+"; expires=Thu, 01-Jan-70 00:00:01 GMT"
+}
+}
+function fixDate(date) {
+var base = new Date(0)
+var skew = base.getTime()
+if (skew > 0)
+date.setTime(date.getTime() - skew)
+}
+var now = new Date()
+fixDate(now)
+now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+var visits = getCookie("counter")
+if (!visits)
+visits = 1
+else
+visits = parseInt(visits) + 1
+setCookie("counter", visits, now)
+document.write("Esta es tu visita numero: " + visits)
+</script>
+</font></h2>
+<rel="stylesheet" type="text/css" />
+    <style>
+      body {background-image: url(panda.jpg);
+        background-repeat:repeat;}
+	  h1{
+        font-family:Gabriola;
+        font-size: 60px;
+        text-shadow: 2px 2px 2px black;
+        color:#1364B5;
+		border: white 4px dotted;color:#1364B5;}
+		  </style>
+	<title>
+		Mi Pagina Web
+	</title>
+</head>
+
+<body text=black>
+  
+
+<FONT SIZE="+3.5"> 
+<B>
+	<h1 align="center">Mariana G&oacutemez Islas mi autobiograf&iacute;a</h1>
+</B> 
+
+<FONT SIZE="+3"> 
+
+<div style="text-align:justify">
+
+<p>
+	<h4>
+		<b>
+			<h3>
+		    
+			<FONT FACE="Gabriola">
+			</h3>
+		</b>
+	<p align="center"><img src="marianita.jpg" height="180"></p>
+	<b>
+	Nac&iacute en los  &Aacutengeles California el primero de abril de 1995, 
+	soy  hija de Griselda Islas Cabrera una psic&oacuteloga educativa e hija de Ra&uacutel G&oacutemez,
+	despu&eacutes de un tiempo de estar viviendo en EUA mi mam&aacute y yo regresamos a M&eacutexico 
+	a un pueblo llamado Xicotepec que se encuenta en la sierra norte del estado de puebla.
+	<img src="xicotepec.jpg" height="200">
+	<br>
+	<br>
+	Mi familia actualmente esta conformada por mi mam&aacute; Griselda y mi hermana Melissa.
+	<img src="familia.jpg" height="200">
+	</h4>
+</p> 
+
+<p> 
+	<h4> 
+		Fui a la escuela primar&iacutea &quot;Emperador Cuauht&eacutemoc&quot; despu&eacutes y a la secundar&iacutea federal &quot;Francisco G&oacutenzales Bocanegra&quot;
+		Actualmente me encuentro estudiando en la benem&eacuterita universidad aut&oacutenoma de Puebla en la facultad de computaci&oacuten una ing.
+		En tecnolog&iacuteas de la informaci&oacuten.
+	<br>
+	Unos de mis mayores gustos son los anim&aacuteles y estar al aire libre. 
+	Me considero una persona amigable y t&iacutemida y me gusta ayudar a los dem&aacutes.
+	<br>
+	<img src="yo.jpg" height="200">
+	</b>
+	</font>
+	</h4> 
+	
+</p> 
+</div>
+
+</body>
+</html>
+
+
